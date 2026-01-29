@@ -6,15 +6,18 @@
 #include <map>
 
 using namespace std;
-class Execution{
-    public :
+class Execution
+{
+public:
     void executeCommand(ParsedCommand cmd);
-    private:
+
+private:
     void insertRecords(ParsedCommand cmd);
     void getRecords(ParsedCommand cmd);
     void deleteRecords(ParsedCommand cmd);
+    void updateRecords(ParsedCommand cmd);
 
-    map<string,map<int,map<string,string>>> database;
+    map<string, map<int, map<string, string>>> database;
 };
 
 #endif

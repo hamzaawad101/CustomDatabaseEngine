@@ -7,20 +7,22 @@
 
 using namespace std;
 
-struct ParsedCommand{
+struct ParsedCommand
+{
     string commandType;
     string tableName;
     int key;
-    map<string,string> fields;
+    map<string, string> fields;
 };
 
-class Parser{
-    public:
+class Parser
+{
+public:
     ParsedCommand parse(string userInput);
-    private:
+
+private:
     vector<string> tokenize(string input);
     bool validate(vector<string> tokens);
-    
 };
 
 #endif
